@@ -41,7 +41,7 @@ function Main() {
 
             //image animation
             tl.from(mainImage1, 1.2, {y: 1280, ease: Power3.easeOut}, 'Start')
-                .from(mainImage1.firstElementChild, 2, {scale: 1.6, ease: Power3.easeOut}, .2)
+                .from(mainImage1, 2, {scale: 1.1, ease: Power3.easeOut}, .2)
 
             //content animation
             tl.staggerFrom([content1.children], 1, {
@@ -50,12 +50,15 @@ function Main() {
                 delay: .8
             }, .15, 'Start')
             .from([content1], 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1.4)
-            .from([content2, content3, content4, content5], 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 2.4)
-            .from([resumeText1, resumeText2], 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 2.8)
-            .from([linkedIn1, linkedIn2], 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 2.8)
+            .from([content2], 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 2.0)
+            .from([content3], 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 2.2)
+            .from([content4], 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 2.4)
+            .from([content5], 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 2.6)
+            .from([resumeText1, resumeText2], 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 3)
+            .from([linkedIn1, linkedIn2], 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 3)
 
-            .from([resume1], 1, {y: 1280, ease: Power3.easeOut}, 3)
-            .from([profileBadge1], 1, {y: 1280, ease: Power3.easeOut}, 3)
+            .from([resume1], 1, {y: 1280, ease: Power3.easeOut}, 3.2)
+            .from([profileBadge1], 1, {y: 1280, ease: Power3.easeOut}, 3.2)
         })
 
 
@@ -73,7 +76,7 @@ function Main() {
             </div>
             {/* currently unable to add linked in tag and need to work on resume modal */}
             <div className="row background-gray">
-                <div className="test col-sm-12 col-lg-6 pt-4">
+                <div className="test screen2 col-sm-12 col-lg-6 pt-4">
                     <div ref={el => linkedIn = el}>
                         <h1>Linkedin</h1>
                         <h5>(Click Below To View Profile)</h5>
@@ -85,8 +88,7 @@ function Main() {
                     </div>
                 </div>
                 <br />
-                <div className="test col-sm-12 col-lg-6 pt-4">
-                    {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
+                <div className="test screen screen2 col-sm-12 col-lg-6 pt-4">
                     <div ref={el => resumeText = el}>
                         <h1>Resume</h1>
                         <h5>(Click To Enlarge)</h5>
@@ -94,7 +96,6 @@ function Main() {
                     <div ref={el => resume = el}>
                         <ImageComponent />
                     </div>
-                    {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
                 </div>
             </div>
 

@@ -26,7 +26,7 @@ h2 span {
     font: bold 24px/45px Helvetica, Sans-Serif; 
     letter-spacing: -1px;  
     padding: 10px;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: -1.4px 0 black, 0 1.4px black, 1.4px 0 black, 0 -1.4px black;
 }
 
 .test {
@@ -41,6 +41,31 @@ h2 span {
 .modal-dialog{
     text-align:center;
 }
+
 .modal-content{
     display:inline-block;
+}
+
+@media screen and (max-width: 768px) {
+    /* The body's bg color will be #333 */
+  .screen {
+      padding-bottom: 100px;
+      margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+    /* The body's bg color will be #333 */
+  .screen2 {
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 1186px) {
+    /* The body's bg color will be #333 */
+  .screen2 {
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+  }
 }
