@@ -3,8 +3,8 @@ import React from "react";
 function Portfolio() {
     return(
         <div>
-            <div class="card">
-                <div class="card-body text-primary bg-dark">
+            <div className="card">
+                <div className="card-body text-primary bg-dark">
                 Application and Project Portfolio
                 </div>
             </div>

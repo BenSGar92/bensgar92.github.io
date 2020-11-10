@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+// import { Link } from "react-router-dom"
 
 function Hero(props) {
   return (
@@ -11,6 +12,9 @@ function Hero(props) {
             <ul class="list-unstyled list-inline text-center py-1">
                 <li class="list-inline-item">
                     <a href="contact.html" class="btn btn-outline-primary btn-rounded">Contact</a>
+                    {/* <Link to="/contact" className={window.location.pathname === "/contact" ? "nav-link active" : "nav-link"}>
+                    Contact
+                    </Link> */}
                 </li>
                 <li class="list-inline-item">
                     <a href="https://www.linkedin.com/in/ben-gardner-6567459a/" target="_blank" class="btn btn-outline-primary btn-rounded">Linkedin</a>
