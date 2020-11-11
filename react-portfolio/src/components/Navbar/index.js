@@ -1,28 +1,38 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom"
-import "./navbar.css";
+import { TimelineLite } from 'gsap';
 
-function Hero(props) {
+
+
+function Nav(props) {
+
+  let header = useRef(null)
+  let tl = new TimelineLite({delay: .8});
+
+  useEffect(() => {
+  tl.from(header, { duration: 1, y: '-100%', ease: 'bounce'})
+  })
+
   return (
-    <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div ref={el => header = el}>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
           <Link className="navbar-brand" to="/">
           Ben Gardner
           </Link>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
                 <Link to="/" className={window.location.pathname === "/" || window.location.pathname === "/main"
                   ? "nav-link active"
                   : "nav-link"
                 }>Homepage</Link>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <Link to="/portfolio" className={window.location.pathname === "/portfolio" ? "nav-link active" : "nav-link"}>
                   Portfolio
                 </Link>
               </li>
-              {/* <li class="nav-item">
+              {/* <li className="nav-item">
                 <Link to="/contact" className={window.location.pathname === "/contact" ? "nav-link active" : "nav-link"}>
                   Contact
                 </Link>
@@ -34,4 +44,4 @@ function Hero(props) {
   );
 }
 
-export default Hero;
+export default Nav;

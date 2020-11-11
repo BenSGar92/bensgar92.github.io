@@ -1,10 +1,10 @@
-import React, {useRef, useEffect, useState } from "react";
-import {TweenMax, TimelineLite, Power3} from 'gsap';
+import React, {useRef, useEffect } from "react";
+import { TimelineLite, Power3} from 'gsap';
 import "./main.css";
-import ImageComponent from "../components/ImageComponent/ImageComponent";
+import ImageComponent from "../../components/ImageComponent/ImageComponent";
 
 //assets
-import mainImage from "../images/mainImage.jpeg"
+import mainImage from "../../images/mainImage.jpeg"
 
 function Main() {
     //var for linkedin url
