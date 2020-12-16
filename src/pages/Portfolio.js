@@ -17,17 +17,17 @@ function Portfolio() {
     let image6right = useRef(null)
     let tl = new TimelineLite({delay: .8});
   
-    useEffect(() => {
-        tl.from(image1left, { duration: 1, x: '-200%', ease: 'bounce'})
-        tl.from(image2right, { duration: 1, x: '200%', ease: 'bounce'})
-        tl.from(image3left, { duration: 1, x: '-200%', ease: 'bounce'})
-        tl.from(image4right, { duration: 1, x: '200%', ease: 'bounce'})
-        tl.from(image5left, { duration: 1, x: '-200%', ease: 'bounce'})
-        tl.from(image6right, { duration: 1, x: '200%', ease: 'bounce'})
+    // useEffect(() => {
+    //     tl.from(image1left, { duration: 1, x: '-200%', ease: 'bounce'})
+    //     tl.from(image2right, { duration: 1, x: '200%', ease: 'bounce'})
+    //     tl.from(image3left, { duration: 1, x: '-200%', ease: 'bounce'})
+    //     tl.from(image4right, { duration: 1, x: '200%', ease: 'bounce'})
+    //     tl.from(image5left, { duration: 1, x: '-200%', ease: 'bounce'})
+    //     tl.from(image6right, { duration: 1, x: '200%', ease: 'bounce'})
         
 
         
-        })
+    //     })
 
     return(
         <div>

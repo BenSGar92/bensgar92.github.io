@@ -1,20 +1,10 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom"
-import { TimelineLite } from 'gsap';
 
-
-
-function Nav(props) {
-
-  let header = useRef(null)
-  let tl = new TimelineLite({delay: .8});
-
-  useEffect(() => {
-  tl.from(header, { duration: 1, y: '-100%', ease: 'bounce'})
-  })
+function Nav() {
 
   return (
-    <div ref={el => header = el}>
+    <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
           <Link className="navbar-brand" to="/">
           Ben Gardner
@@ -32,11 +22,11 @@ function Nav(props) {
                   Portfolio
                 </Link>
               </li>
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <Link to="/contact" className={window.location.pathname === "/contact" ? "nav-link active" : "nav-link"}>
                   Contact
                 </Link>
-              </li> */}
+              </li>
             </ul>
           </div>
         </nav>
